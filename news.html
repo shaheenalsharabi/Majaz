@@ -1,0 +1,129 @@
+ <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أخبار وتقارير</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: re ;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: ;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            text-align: right;
+        }
+        .article {
+            background: rgba(255, 255, 255, 0.5)
+; /* خلفية سوداء شفافة */
+            color: #ff0000; /* لون النص */
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .article img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .article h2 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: black; /* لون مميز لعنوان الخبر */
+        }
+        .article p {
+            color: black; /* لون نص المحتوى */
+            font-weight: bold;
+            text-align: left;
+        }
+        .date {
+            font-size: 0.9em;
+            color: blue;
+            
+        }
+        .share-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .share-button:hover {
+            background-color: #0056b3;
+        }
+        .f{
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="f">أخبار وتقارير</h1>
+</header>
+
+<div class="container">
+    <div class="article">
+        <img src="images_news/A4T_11_04_2025_07_24_23 (1).jpg" alt="خبر 1">
+        
+        <h2>واشنطن تحذر الشركات والسفن من التعامل مع الموانئ الخاضعة لسيطرة الحوثيين</h2>
+        
+        <p class="date">نشرت قبل 4 ساعات</p>
+      
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </div>
+    <div class="article">
+      
+        <img src="images_news/A4T_11_04_2025_08_45_58.jpg" alt="خبر 2">
+        <h2>الصحة العالمية تطلق تحذيرات صادمة عن الواقع الصحي الكارثي في اليمن</h2>
+        <p class="date">نشرت قبل 6 ساعات</p>
+      
+        <button class="share-button" onclick="share('عنوان الخبر 2', 'محتوى الخبر 2', 'image-url-2.jpg')">شارك</button>
+    </div>
+    <div class="article">
+        <img src="images_news/A4T_11_04_2025_07_41_46.jpg" alt="خبر 3">
+        <h2>وقفة حاشدة في مأرب دعماً لغزة وتنديداً باستمرار العدوان الإسرائيلي</h2>
+        <p class="date">نشرت قبل 8 ساعات</p>
+      
+        <button class="share-button" onclick="share('عنوان الخبر 3', 'محتوى الخبر 3', 'image-url-3.jpg')">شارك</button>
+    </div>
+        <div class="article">
+      
+      <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
+      <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
+      <p class="date">نشرت قبل 6 ساعات</p>
+    
+      <button class="share-button" onclick="share('عنوان الخبر 2', 'محتوى الخبر 2', 'image-url-2.jpg')">شارك</button>
+    </div>
+</div>
+
+<script>
+    function share(title, content, imageUrl) {
+        if (navigator.share) {
+            navigator.share({
+                title: title,
+                text: content,
+                url: imageUrl
+            })
+            .then(() => console.log('تمت المشاركة بنجاح!'))
+            .catch((error) => console.error('خطأ في المشاركة:', error));
+        } else {
+            alert("خاصية المشاركة غير مدعومة في هذا المتصفح.");
+        }
+    }
+</script>
+
+</body>
+</html>

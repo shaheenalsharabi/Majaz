@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>عقد اشتراك</title>
+    <link href="//fonts.googleapis.com/css?family=Mukta:400,500,600" rel="stylesheet">
+
+    <link rel="icon"href="icon/٢٠٢٥٠٢١٥_٠١٥٤٣١.png">
+    <link rel="stylesheet" href="css/page4.css">
+    <style>
+        input, select, button {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        button {
+            background-color: #25D366; /* لون زر واتساب */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #128C7E;
+        }
+.wx{
+ border-radius: 30px;
+}
+    </style>
+</head>
+<body>
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+                <li class="nav-item @@contact__active">
+                    <a class="nav-link" href="page4.html"><h4><img src="icon2/رجوع.svg"></h4></a>
+                </li>
+            </nav>
+        </div>
+    </header>
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+            <div class="container py-lg-4 py-md-3">
+            <img  src="images2/٢٠٢٥٠٣٠١_٠١١٩١٢.png" width="100%" class="wx">
+            </div>
+        </div>
+    </section>
+    <style>
+      .x1{
+        background-color: teal;
+        padding: 7px;
+        color: white;
+        font-size: 25px;
+      }
+      .x2{
+        padding: 7px;
+        color: teal;
+      }
+    </style>
+    
+    <div class="">
+      <h4 class="x1">عقد التزام بين الطرفين</h4>
+      <br>
+      <input type="text" id="dateTime" readonly>
+        
+        <input type="text" id="name" placeholder="اســـم الطرف الثانــي" required maxlength="20" title="">
+        <input type="tel" id="phone" placeholder="رقـــم الهاتف" required maxlength="9" title="">
+        
+     <input class="box1" type="text" required maxlength="20" id="floor" placeholder="نـــوع العقار" required><br>
+     
+        <select id="count" required>
+            <option value="">المنطقه او الحي</option>
+            <option value="جوار المحطة">جوار المحطة</option>
+            <option value="جولـــه سـنـان">جوله سنان</option>
+            <option value="الوقــش">الوقش</option>
+            <option value="المغتربين">المغتربين</option>
+
+ <option value="حــول صــدام">حول صدام</option>
+ <option value="الضبوعة">الضبوعة</option>
+ <option value="الروضة">الروضة</option>
+ <option value="حاره عمار">حاره عمار</option>
+ <option value="النبيشة">النبيشة</option>
+        </select>
+        
+  
+        <input class="box1" type="text" required maxlength="20" id="roomType" placeholder="اقرب مشترك" required><br>
+    
+        <input class="box1" type="text" required maxlength="20" id="roomNumber" placeholder="اقرب مشترك" required><br>
+        <button onclick="sendToWhatsApp()"> تاكيد الاشتراك</button>
+    </div>
+<br>
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const count = document.getElementById('count').value;
+            const dateTime = document.getElementById('dateTime').value;
+            const roomType = document.getElementById('roomType').value;
+            const floor = document.getElementById('floor').value;
+            const roomNumber = document.getElementById('roomNumber').value;
+
+            if (!name || !phone || !count  || !dateTime|| !roomType || !floor || !roomNumber) {
+                alert("يرجى ملء جميع الحقول.");
+                return;
+            }
+
+            const message = `اسـم المشترك: ${name}\nرقم الهاتف: ${phone}\n المنطه او الحي: ${count}\n التاريخ ولوقت: ${dateTime}\nنوع العقار :  ${floor} \n اقرب مشترك: ${roomNumber}`;
+            const phoneNumber = '734157579'; // الرقم الثابت
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            // فتح الرابط في نفس النافذة
+            window.location.href = url;
+
+            // إعادة توجيه المستخدم إلى page4-5 بعد فترة قصيرة
+            setTimeout(() => {
+                window.location.replace("page4-5.html");
+            }, 2000); // 2 ثواني
+        }
+    </script>
+    <script>
+      function updateDateTime() {
+          const now = new Date();
+          const formattedDate = now.toLocaleString('ar-EG', { timeZone: 'Asia/Baghdad' });
+          document.getElementById('dateTime').value = formattedDate;
+      }
+
+      updateDateTime();
+      setInterval(updateDateTime, 1000); // تحديث كل ثانية
+  </script>
+</body>
+</html>

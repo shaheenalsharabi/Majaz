@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدخال الأخبار</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>إدخال الأخبار</h1>
+<form id="newsForm">
+    <input type="text" id="title" placeholder="عنوان الخبر" required>
+    <textarea id="content" placeholder="محتوى الخبر" required></textarea>
+    <input type="text" id="imageUrl" placeholder="رابط الصورة" required>
+    <button type="submit">إضافة الخبر</button>
+</form>
+
+<script>
+    document.getElementById('newsForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // منع إعادة تحميل الصفحة
+
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+        const imageUrl = document.getElementById('imageUrl').value;
+
+        let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+        newsList.push({ title, content, imageUrl });
+        localStorage.setItem('newsList', JSON.stringify(newsList));
+
+        alert("تم إضافة الخبر بنجاح!");
+        document.getElementById('newsForm').reset();
+    });
+</script>
+
+</body>
+</html>

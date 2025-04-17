@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>الإبلاغ عن مشكلة</title>
+    <link href="//fonts.googleapis.com/css?family=Mukta:300,400,500" rel="stylesheet">
+    <link rel="icon" href="icon/٢٠٢٥٠٢١٥_٠١٥٤٣١.png">
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ccc;
+        }
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+            text-align: right;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: right;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .v {
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="v" src="images2/٢٠٢٥٠٢١٥_٠١٥٤٣١.png" alt="Logo">
+        <h2>الإبلاغ عن مشكلة</h2>
+        <form id="reportForm">
+            <label for="name">اسم المشترك</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="region">العنوان</label>
+            <input type="text" id="region" name="region" required>
+
+            <label for="issue">نوع المشكلة</label>
+            <select id="issue" name="issue" required>
+                <option value="">اختر نوع المشكلة</option>
+                <option value="فصل التيار">فصل التيار</option>
+                <option value="شرارة في التيار">شرارة في التيار</option>
+                <option value="مشاكل أخرى">مشاكل أخرى</option>
+            </select>
+
+            <label for="description">وصف المشكلة</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="button" onclick="sendWhatsApp()">إرسال</button>
+        </form>
+    </div>
+
+    <script>
+        function sendWhatsApp() {
+            const name = document.getElementById('name').value;
+            const region = document.getElementById('region').value;
+            const issue = document.getElementById('issue').value;
+            const description = document.getElementById('description').value;
+
+            const whatsappNumber = "734157579"; // استبدل بهذا الرقم الثابت
+            const message = `اسم: ${name}\nمنطقة: ${region}\nنوع المشكلة: ${issue}\nوصف المشكلة: ${description}`;
+            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

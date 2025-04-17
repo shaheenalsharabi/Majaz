@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"href="icon/٢٠٢٥٠٤١٢_٠٥٣٠١٩.png">
+    <title>صفحة تسجيل الدخول</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-weight: bolder;
+        }
+        form {
+            background: whitesmoke;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc;
+            width: 80%; /* تحديد عرض النموذج */
+            max-width: 400px; /* تعيين أقصى عرض للنموذج */
+            margin-bottom: 20px; /* إضافة مساحة أسفل النموذج */
+        }
+        input {
+            margin: 8px 0;
+            padding: 10px;
+            width: 80%; /* استخدام العرض الكامل للنموذج */
+            height: 25px;
+            border: 2px solid #ccc;
+            border-radius: 18px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 15px;
+            border-color: whitesmoke;
+        }
+        button {
+            padding: 3px;
+            background: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 18px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 80%; /* استخدام العرض الكامل للنموذج */
+            margin-top: 10px; /* إضافة مسافة بين الأزرار */
+        }
+        .cancel-button {
+            background: #d9534f;
+        }
+        .news-ticker {
+            
+            color: darkred;
+            font-weight: bolder;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 95%; /* استخدام العرض الكامل */
+            text-align: center;
+            margin-top: 0px; /* مساحة أعلى شريط الأخبار */
+            border-radius: 5px; /* إضافة زوايا مدورة */
+        }
+        .news-ticker span {
+            display: inline-block;
+            padding-right: 50px;
+            animation: ticker 10s linear infinite;
+        }
+        @keyframes ticker {
+            from {
+                transform: translateX(10%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<form id="loginForm">
+  
+<img   src="images2/٢٠٢٥٠٤١٢_٠٥٣٠١٩.png" width="40%" class="sn">
+     <div class="news-ticker">
+   <span>⚠️ يتم تسجيل الدخول من خلال المسول فقط! ⚠️</span>
+ </div>
+ <br>
+    <input type="text" id="username" placeholder="اسم المستخدم" required>
+    <input type="password" id="password" placeholder="كلمة المرور" required>
+    <button type="submit">تأكيد الدخول</button>
+    <button type="button" class="cancel-button" onclick="window.location.href='index.html';">إلغاء</button>
+
+   
+</form>
+
+<script>
+    const validUsers = {
+     'عبدالصمد': '1111',
+        'شرف': '2222',
+        'مهيب': '3333'
+    };
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (validUsers[username] && validUsers[username] === password) {
+            window.location.href = 'page5.html'; // استبدل بـ URL الصفحة المستهدفة
+        } else {
+            alert('اسم المستخدم أو كلمة المرور غير صحيحة');
+        }
+    });
+</script>
+
+</body>
+</html>
