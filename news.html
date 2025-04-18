@@ -10,52 +10,61 @@
             margin: 0;
             padding: 0;
             background-color: re ;
+            width: 100%;
         }
         header {
-            background: #333;
+            background: #a70505;
             color: #fff;
             padding: 15px;
-            text-align: ;
+            text-align: center;
+            
         }
+
         .container {
-            width: 80%;
+            width: 95%;
             margin: auto;
             padding: 20px 0;
-            text-align: right;
+            text-align: center;
+            
         }
         .article {
             background: rgba(255, 255, 255, 0.5)
 ; /* خلفية سوداء شفافة */
-            color: #ff0000; /* لون النص */
+            color: black; /* لون النص */
             margin: 20px 0;
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
         .article img {
+            width: 100%;
+            height: auto;
             max-width: 100%;
             border-radius: 5px;
+            text-align: center;
         }
         .article h2 {
             margin: 10px 0;
             font-size: 1.2em;
             color: black; /* لون مميز لعنوان الخبر */
+            text-align: right;
         }
         .article p {
             color: black; /* لون نص المحتوى */
             font-weight: bold;
-            text-align: left;
+            text-align: right;
         }
         .date {
-            font-size: 0.9em;
+            font-size: 1em;
             color: blue;
+            margin: 3px 0;
             
         }
         .share-button {
             background-color: #007bff;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 5px 15px;
             border-radius: 25px;
             cursor: pointer;
             margin-top: 10px;
@@ -66,6 +75,16 @@
         .f{
           text-align: center;
         }
+        #timer,#timer3,#timer4 {
+            font-size: 15px;
+            color: #999595;
+            margin: 5px 0;
+        }
+        #timer2 {
+            font-size: 15px;
+            color: #333;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -75,39 +94,467 @@
 </header>
 
 <div class="container">
+
+<!---------------------------------------------------------1------------------------------------------------------------------->
+
     <div class="article">
         <img src="images_news/A4T_11_04_2025_07_24_23 (1).jpg" alt="خبر 1">
         
         <h2>واشنطن تحذر الشركات والسفن من التعامل مع الموانئ الخاضعة لسيطرة الحوثيين</h2>
         
-        <p class="date">نشرت قبل 4 ساعات</p>
-      
+    
+        <p id="timer">نشرت قبل 0 دقائق</p>
+    <!------------------------------------------------------------------------------------------------------>
+    <style>
+        #salat-list-t{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_t()">قراءه المزيد</a></h4> 
+    <div id="salat-list-t">
+    <ul>
+    
+        <p>......................</p>
         <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
     </div>
-    <div class="article">
       
+        
+    </div>
+    <script>
+        function togglesalatlistt_t(){
+          var salatList=document.getElementById("salat-list-t");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+<!-----------------------------------------------------ex1-------------------------------------------------------------------->
+
+
+    <div class="article">
         <img src="images_news/A4T_11_04_2025_08_45_58.jpg" alt="خبر 2">
         <h2>الصحة العالمية تطلق تحذيرات صادمة عن الواقع الصحي الكارثي في اليمن</h2>
-        <p class="date">نشرت قبل 6 ساعات</p>
-      
-        <button class="share-button" onclick="share('عنوان الخبر 2', 'محتوى الخبر 2', 'image-url-2.jpg')">شارك</button>
+        
+        <p id="timer2">نشرت قبل 0 دقائق</p>
+      <!------------------------------------------------------------------------------------------------------>
+    <style>
+        #salat-list-a{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_a()">قراءه المزيد</a></h4> 
+    <div id="salat-list-a">
+    <ul>
+    
+        <p>.......................................................................................
+            ........................................................</p>
+
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
     </div>
+    <script>
+        function togglesalatlistt_a(){
+          var salatList=document.getElementById("salat-list-a");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+    </div>
+
+
+<!--------------------------------------------------ex2--------------------------------------------->
+
     <div class="article">
         <img src="images_news/A4T_11_04_2025_07_41_46.jpg" alt="خبر 3">
         <h2>وقفة حاشدة في مأرب دعماً لغزة وتنديداً باستمرار العدوان الإسرائيلي</h2>
-        <p class="date">نشرت قبل 8 ساعات</p>
-      
-        <button class="share-button" onclick="share('عنوان الخبر 3', 'محتوى الخبر 3', 'image-url-3.jpg')">شارك</button>
+        
+        <p id="timer3">نشرت قبل 0 دقائق</p>
+        <style>
+            #salat-list-b{
+                text-align: center;
+                color: white;
+                display: none;}
+        </style>
+        <h4 class="cl1"><a onclick="togglesalatlistt_b()">قراءه المزيد</a></h4> 
+        <div id="salat-list-b">
+        <ul>
+        
+            <p>......................</p>
+    
+            <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+        </ul>
+        </div>
+        <script>
+            function togglesalatlistt_b(){
+              var salatList=document.getElementById("salat-list-b");
+              if (salatList.style.display=="none"){
+                salatList.style.display="block";
+              }else{
+                salatList.style.display="none";
+              }
+            }
+          </script> 
+    
     </div>
-        <div class="article">
-      
+
+<!----------------------------------------------------ex2----------------------------------------------------------------->
+
+    <div class="article">
       <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
       <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
-      <p class="date">نشرت قبل 6 ساعات</p>
+      <p id="timer4">نشرت قبل 0 دقائق</p>
+      <style>
+        #salat-list-c{
+            text-align: center;
+            color: white;
+            display: none;}
+
+            #likeCount {
+               font-size: 24px;
+               color: #333;
+               margin-bottom: 20px;
+           }
+           button {
+               padding: 10px 20px;
+               font-size: 16px;
+               cursor: pointer;
+           }
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_c()">قراءه المزيد</a></h4> 
+    <div id="salat-list-c">
+    <ul>
     
-      <button class="share-button" onclick="share('عنوان الخبر 2', 'محتوى الخبر 2', 'image-url-2.jpg')">شارك</button>
+        <p>......................</p>
+        <div id="likeCount">0 إعجاب</div>
+        <button id="likeButton">أعجبني</button>
+        <script>
+            // استرجاع عدد الإعجابات من الخادم
+            function fetchLikeCount() {
+                fetch('like.php')
+                    .then(response => response.text())
+                    .then(count => {
+                        document.getElementById('likeCount').innerText = count + ' إعجاب';
+                    });
+            }
+ 
+            document.getElementById('likeButton').addEventListener('click', () => {
+                fetch('like.php', {
+                    method: 'POST'
+                }).then(() => {
+                    fetchLikeCount(); // تحديث عدد الإعجابات
+                });
+            });
+ 
+            // تحديث عدد الإعجابات عند تحميل الصفحة
+            fetchLikeCount();
+        </script>
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
     </div>
+    <script>
+        function togglesalatlistt_c(){
+          var salatList=document.getElementById("salat-list-c");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+
 </div>
+<!-------------------------------------ex3--------------------------------------------------------------------------------------->
+
+<div class="article">
+    <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
+    <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
+    <p class="date">نشرت قبل 6 ساعات</p>
+    <style>
+        #salat-list-d{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_d()">قراءه المزيد</a></h4> 
+    <div id="salat-list-d">
+    <ul>
+    
+        <p>......................</p>
+
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
+    </div>
+    <script>
+        function togglesalatlistt_d(){
+          var salatList=document.getElementById("salat-list-d");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+
+</div>
+<!---------------------------------------------------ex4------------------------------------------------------------------>
+
+<div class="article">
+    <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
+    <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
+    <p class="date">نشرت قبل 6 ساعات</p>
+    <style>
+        #salat-list-e{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_e()">قراءه المزيد</a></h4> 
+    <div id="salat-list-e">
+    <ul>
+    
+        <p>......................</p>
+
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
+    </div>
+    <script>
+        function togglesalatlistt_e(){
+          var salatList=document.getElementById("salat-list-e");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+
+</div>
+<!-----------------------------------------------ex5------------------------------------------------>
+
+<div class="article">
+    <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
+    <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
+    <p class="date">نشرت قبل 6 ساعات</p>
+    <style>
+        #salat-list-f{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_f()">قراءه المزيد</a></h4> 
+    <div id="salat-list-f">
+    <ul>
+    
+        <p>......................</p>
+
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
+    </div>
+    <script>
+        function togglesalatlistt_f(){
+          var salatList=document.getElementById("salat-list-f");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+
+</div>
+<!-------------------------------------------------ex6---------------------------------------------->
+<div class="article">
+    <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
+    <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
+    <p class="date">نشرت قبل 6 ساعات</p>
+    <style>
+        #salat-list-g{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_g()">قراءه المزيد</a></h4> 
+    <div id="salat-list-g">
+    <ul>
+    
+        <p>......................</p>
+
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
+    </div>
+    <script>
+        function togglesalatlistt_g(){
+          var salatList=document.getElementById("salat-list-g");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+
+</div>
+<!---------------------------------------------------ex7-------------------------------------------->
+<div class="article">
+    <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
+    <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
+    <p class="date">نشرت قبل 6 ساعات</p>
+    <style>
+        #salat-list-h{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_h()">قراءه المزيد</a></h4> 
+    <div id="salat-list-h">
+    <ul>
+    
+        <p>......................</p>
+
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
+    </div>
+    <script>
+        function togglesalatlistt_h(){
+          var salatList=document.getElementById("salat-list-h");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+
+</div>
+<!----------------------------------------------------------------------------------------------->
+<div class="article">
+    <img src="images_news/A4T_11_04_2025_06_37_26.jpeg" alt="خبر 2">
+    <h2>شرطة تعز تضبط المتهم بجريمة قتل رجل المرور نبيل الرازقي</h2>
+    <p class="date">نشرت قبل 6 ساعات</p>
+    <style>
+        #salat-list-m{
+            text-align: center;
+            color: white;
+            display: none;}
+    </style>
+    <h4 class="cl1"><a onclick="togglesalatlistt_m()">قراءه المزيد</a></h4> 
+    <div id="salat-list-m">
+    <ul>
+    
+        <p>......................</p>
+
+        <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
+    </ul>
+    </div>
+    <script>
+        function togglesalatlistt_m(){
+          var salatList=document.getElementById("salat-list-m");
+          if (salatList.style.display=="none"){
+            salatList.style.display="block";
+          }else{
+            salatList.style.display="none";
+          }
+        }
+      </script> 
+
+</div>
+<!----------------------------------------------------------------------------------------------->
+</div>
+<script>
+    // إذا لم يتم تخزين الوقت، نقوم بتخزينه
+    if (!localStorage.getItem('startTime')) {
+        localStorage.setItem('startTime', new Date().getTime());
+    }
+
+    function updateTimer() {
+        const startTime = parseInt(localStorage.getItem('startTime'));
+        const currentTime = new Date().getTime();
+        const seconds = Math.floor((currentTime - startTime) / 1000);
+        let displayTime;
+
+        if (seconds < 3600) {
+            displayTime = Math.floor(seconds / 60) + ' دقائق';
+        } else if (seconds < 86400) {
+            displayTime = Math.floor(seconds / 3600) + ' ساعات';
+        } else if (seconds < 2592000) {
+            displayTime = Math.floor(seconds / 86400) + ' أيام';
+        } else {
+            displayTime = Math.floor(seconds / 2592000) + ' شهور';
+        }
+
+        document.getElementById('timer').innerText = displayTime;
+    }
+
+    setInterval(updateTimer, 1000); // تحديث العداد كل ثانية
+    updateTimer(); // تحديث العداد عند التحميل
+</script>
+<!-------------------------------------------------------------------------------------------------->
+<script>
+    // إذا لم يتم تخزين الوقت، نقوم بتخزينه
+    if (!localStorage.getItem('startTime2')) {
+        localStorage.setItem('startTime2', new Date().getTime());
+    }
+
+    function updateTimer2() {
+        const startTime = parseInt(localStorage.getItem('startTime2'));
+        const currentTime = new Date().getTime();
+        const seconds = Math.floor((currentTime - startTime) / 1000);
+        let displayTime;
+
+        if (seconds < 3600) {
+            displayTime = Math.floor(seconds / 60) + ' دقائق';
+        } else if (seconds < 86400) {
+            displayTime = Math.floor(seconds / 3600) + ' ساعات';
+        } else if (seconds < 2592000) {
+            displayTime = Math.floor(seconds / 86400) + ' أيام';
+        } else {
+            displayTime = Math.floor(seconds / 2592000) + ' شهور';
+        }
+
+        document.getElementById('timer2').innerText = displayTime;
+    }
+
+    setInterval(updateTimer2, 1000); // تحديث العداد كل ثانية
+    updateTimer2(); // تحديث العداد عند التحميل
+</script>
+<!-------------------------------------------------------------------------------------------------->
+<script>
+    // إذا لم يتم تخزين الوقت، نقوم بتخزينه
+    if (!localStorage.getItem('startTime3')) {
+        localStorage.setItem('startTime3', new Date().getTime());
+    }
+
+    function updateTimer2() {
+        const startTime = parseInt(localStorage.getItem('startTime3'));
+        const currentTime = new Date().getTime();
+        const seconds = Math.floor((currentTime - startTime) / 1000);
+        let displayTime;
+
+        if (seconds < 3600) {
+            displayTime = Math.floor(seconds / 60) + ' دقائق';
+        } else if (seconds < 86400) {
+            displayTime = Math.floor(seconds / 3600) + ' ساعات';
+        } else if (seconds < 2592000) {
+            displayTime = Math.floor(seconds / 86400) + ' أيام';
+        } else {
+            displayTime = Math.floor(seconds / 2592000) + ' شهور';
+        }
+
+        document.getElementById('timer3').innerText = displayTime;
+    }
+
+    setInterval(updateTimer2, 1000); // تحديث العداد كل ثانية
+    updateTimer2(); // تحديث العداد عند التحميل
+</script>
+<!-------------------------------------------------------------------------------------------------->
 
 <script>
     function share(title, content, imageUrl) {
