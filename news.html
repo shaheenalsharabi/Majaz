@@ -46,8 +46,11 @@
         .article h2 {
             margin: 10px 0;
             font-size: 1.2em;
-            color: black; /* لون مميز لعنوان الخبر */
+            color: white; /* لون مميز لعنوان الخبر */
             text-align: right;
+            background-color: #a70505;
+            padding: 5px;
+            border-radius: 5px;
         }
         .article p {
             color: black; /* لون نص المحتوى */
@@ -98,7 +101,7 @@
 <!---------------------------------------------------------1------------------------------------------------------------------->
 
     <div class="article">
-        <img src="images_news/A4T_11_04_2025_07_24_23 (1).jpg" alt="خبر 1">
+        <img src="images_news/٢٠٢٥٠٤١٨_٠٣٢٤٢٣.png" alt="خبر 2">
         
         <h2>واشنطن تحذر الشركات والسفن من التعامل مع الموانئ الخاضعة لسيطرة الحوثيين</h2>
         
@@ -136,7 +139,7 @@
 
 
     <div class="article">
-        <img src="images_news/A4T_11_04_2025_08_45_58.jpg" alt="خبر 2">
+        <img src="images_news/٢٠٢٥٠٤١٨_٠٣٢٤٢٣.png" alt="خبر 2">
         <h2>الصحة العالمية تطلق تحذيرات صادمة عن الواقع الصحي الكارثي في اليمن</h2>
         
         <p id="timer2">نشرت قبل 0 دقائق</p>
@@ -151,7 +154,7 @@
     <div id="salat-list-a">
     <ul>
     
-        <p>.......................................................................................
+        <p>.......................................................
             ........................................................</p>
 
         <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
@@ -173,7 +176,7 @@
 <!--------------------------------------------------ex2--------------------------------------------->
 
     <div class="article">
-        <img src="images_news/A4T_11_04_2025_07_41_46.jpg" alt="خبر 3">
+        <img src="images_news/٢٠٢٥٠٤١٨_٠٣٢٤٢٣.png" alt="خبر 2">
         <h2>وقفة حاشدة في مأرب دعماً لغزة وتنديداً باستمرار العدوان الإسرائيلي</h2>
         
         <p id="timer3">نشرت قبل 0 دقائق</p>
@@ -217,45 +220,13 @@
             color: white;
             display: none;}
 
-            #likeCount {
-               font-size: 24px;
-               color: #333;
-               margin-bottom: 20px;
-           }
-           button {
-               padding: 10px 20px;
-               font-size: 16px;
-               cursor: pointer;
-           }
     </style>
     <h4 class="cl1"><a onclick="togglesalatlistt_c()">قراءه المزيد</a></h4> 
     <div id="salat-list-c">
     <ul>
     
         <p>......................</p>
-        <div id="likeCount">0 إعجاب</div>
-        <button id="likeButton">أعجبني</button>
-        <script>
-            // استرجاع عدد الإعجابات من الخادم
-            function fetchLikeCount() {
-                fetch('like.php')
-                    .then(response => response.text())
-                    .then(count => {
-                        document.getElementById('likeCount').innerText = count + ' إعجاب';
-                    });
-            }
- 
-            document.getElementById('likeButton').addEventListener('click', () => {
-                fetch('like.php', {
-                    method: 'POST'
-                }).then(() => {
-                    fetchLikeCount(); // تحديث عدد الإعجابات
-                });
-            });
- 
-            // تحديث عدد الإعجابات عند تحميل الصفحة
-            fetchLikeCount();
-        </script>
+
         <button class="share-button" onclick="share('عنوان الخبر 1', 'محتوى الخبر 1', 'image-url-1.jpg')">شارك</button>
     </ul>
     </div>
